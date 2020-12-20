@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title> Form </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<script src="https://kit.fontawesome.com/c4510b0273.js" crossorigin=""></script>
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+	<div class="bg">
+
+		<img src="background-img.jpg" alt="">
+
+		<h1 class="head-title"> Fill in your personal details </h1>
+		<div class="form-box">
+			<form action="/submit">
+				<p>
+					<label for="first_name">First Name: </label>
+					<input type="text" id="first_name" placeholder="first name" required>
+
+				</p>
+
+
+				<p>
+					<label for=" last_name">Last Name: </label>
+					<input type="text" id="last_name" placeholder="last name" required>
+
+				</p>
+				<p class="address-section">
+					<!-- flex applied to the 2 spans - not to the total 4 elements -->
+					<span class="address-location">
+						<label for="address">Address: </label>
+						<input type="text" id="address" placeholder="address" required>
+					</span>
+					<span class="address-number">
+						<label for="addressnumber">Number: </label><input type="text" id="addressnumber"
+							placeholder="address number" required>
+					</span>
+				</p>
+
+				<p class="city-section">
+					<label for="city_section">City: </label>
+					<select name="city" id="city_section">
+						<option value="">Select</option>
+						<option value="berlin">Berlin</option>
+						<option value="munich">Munich</option>
+						<option value="gdansk">Gdansk</option>
+						<option value="koln">Koln</option>
+						<option value="london">London</option>
+						<option value="bucharest">Bucharest</option>
+						<option value="warsaw">Warsaw</option>
+					</select>
+
+				</p>
+				<p>
+					<label for="address_code">Addr. Code: </label>
+					<input type="text" id="address_code" placeholder="address code" required>
+				</p>
+
+				<p>
+					<label for="email">E-mail: </label>
+					<input type="email" id="email" maxlength="15" placeholder="email" required>
+				</p>
+				<br>
+				<p class="payment-section">
+					<label>Payment Methods</label>
+					<br>
+				<div class="payment-options">
+					<label for="credit-card">
+						<i class="far fa-credit-card"></i> </label>
+					<input type="radio" name="payment_method" id="credit-card">
+
+
+					<label for="paypal">
+						<i class="fab fa-cc-paypal"></i>
+					</label>
+					<input type="radio" name="payment_method" id="paypal">
+
+
+					<label for="google-pay">
+						<i class="fab fa-google-pay"></i>
+
+					</label>
+					<input type="radio" name="payment_method" id="google-pay">
+
+
+				</div>
+				</p>
+				<br>
+				<p class="requests-section">
+					<label for="requests">Any special requests?</label>
+
+					<textarea name="Requests" id="requests" cols="30" rows="10" placeholder="Comment here!"></textarea>
+				</p>
+
+				<div class="buttons">
+					<button type="submit">Submit Order</button>
+					<button type="reset"> Reset</button>
+				</div>
+				<!--το ίδιο <input type="reset" style = "background-color:#ff884d" value="Επαναφορά">-->
+
+
+				<!-- </table> -->
+			</form>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

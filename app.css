@@ -1,0 +1,215 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+/* OTHERWISE WITHOUT IMG */
+/* body {
+    background-image:  url("https://images.unsplash.com/photo-1570342457682-80fd926f6b13?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+body{
+    /* no gutters top-left-right */
+    margin: auto 0;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+}
+.bg{
+    /* covers the whole content(box). It counts only for children elements that are NOT absolute positioned */
+    height: auto;
+    padding-bottom: 15rem;
+    background-color:black;
+    position: relative;
+    z-index: 0;
+}
+.bg img{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.8;
+    /* streched - no responsive */
+    height: 100vh;  
+    z-index: -1;
+}
+
+.head-title{
+    margin: 0 auto;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    text-align:center;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+
+}
+
+input{
+    padding: 0.5rem;
+    border: 3.5px solid  rgb(111, 170, 185);
+    width: 12rem;
+}
+input#addressnumber{
+    width: 8rem;
+}    
+
+select{
+    padding: 0.3rem;
+    width: 10rem;
+    margin-right: 3rem;
+
+}
+
+
+.form-box{
+box-sizing: border-box;
+background-color: #ffac83;
+margin: 0 auto; 
+padding: 3rem;
+
+max-width: 70rem;
+display: block;
+/* OR with variable margin & width */
+/* margin: 2rem 15rem;
+min-width: 24rem; */
+}
+
+form p{
+    margin-bottom: 1.5rem;
+    display: flex;
+    /* width: 45%; */
+    justify-content: flex-start;
+    align-items: center;
+    /* in order the address-number to wrap under the address location. Also double flex is needed */
+    flex-wrap: wrap;
+
+}
+
+form p label, form p input{
+    flex-basis: 25%;
+}
+
+
+
+form p .address-location {
+    flex-basis: 52%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+form p .address-location input, form p .address-location label{
+    flex-basis: 50%;
+
+}
+form p .address-number{
+    margin-left: 2rem;
+    flex-basis: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+form p .address-number input, form p .address-number label{
+    flex-basis: 50%;
+
+
+}
+form p.city-section{
+    flex-wrap: nowrap;
+}
+
+form i{
+    font-size:2rem;
+}
+
+/* Differantiate the input width */
+.payment-options input{
+    width: initial;
+}
+
+/* no wrap of the label */
+form p.payment-section{
+    display: inline-block;
+}
+
+.payment-options{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%; /********************/
+    justify-content: space-between;
+}
+
+form .requests-section{
+flex-direction: column;
+align-items: start;
+} 
+form p.requests-section label{
+    margin-bottom: 0.4rem;
+}
+
+button{
+border-radius: 0.2rem;
+padding: 13px 20px;
+border: none;
+font-weight: 500;
+letter-spacing: 0.1rem;
+font-size: 1rem;
+background-color:  rgb(111, 170, 185);
+color:white;
+}
+
+/* nth-child(n) need to be inserted into a class (.buttons) to be valid */
+.buttons button:nth-child(2){
+    background-color:#ff884d;
+    }
+
+button:hover{
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+
+/* *************** MEDIA ***************** */
+/* SM Screens */
+@media(max-width: 768px){
+    .head-title{
+        margin: 0 auto;
+        padding-top: 3rem;
+        padding-bottom: 1.8rem;
+        text-align:center;
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+    
+    }
+}
+
+
+/* S-XS Screens */
+@media(max-width: 700px){
+    form p .address-number{
+        margin-top: 1.2rem;
+        margin-left: 0rem;
+               
+    }
+    /* WHEN address-number IS UNDER address-location element */
+    form p .address-location{
+        flex-basis: 100%;
+    }
+    form p .address-location input, form p .address-location label{   /* */
+        flex-basis: 25%; 
+    }
+
+    form p .address-number{
+        flex-basis: 100%;
+    }
+    form p .address-number input, form p .address-number label{   /* */
+        flex-basis: 25%;  
+    }
+    
+} 
+
