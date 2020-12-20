@@ -115,8 +115,6 @@ form p .address-number{
 }
 form p .address-number input, form p .address-number label{
     flex-basis: 50%;
-
-
 }
 form p.city-section{
     flex-wrap: nowrap;
