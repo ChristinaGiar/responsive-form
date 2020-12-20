@@ -103,7 +103,6 @@ form p .address-location {
 }
 form p .address-location input, form p .address-location label{
     flex-basis: 50%;
-
 }
 form p .address-number{
     margin-left: 2rem;
